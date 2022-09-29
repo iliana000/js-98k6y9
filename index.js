@@ -101,8 +101,8 @@ const deduplicate = (questions) => {
     return bestAnswerRate(q1) - bestAnswerRate(q2);
   });
   let questionsMap = new Map(sortedQuestions.map((q) => [q.content, q]));
-  let result = [...questionsMap.values()].sort((q1, q2) => q1.id - q2.id);
-  return result;
+  let output = [...questionsMap.values()].sort((q1, q2) => q1.id - q2.id);
+  return output;
 };
 
 // O(n^2)
